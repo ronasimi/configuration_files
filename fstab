@@ -1,0 +1,16 @@
+# 
+# /etc/fstab: static file system information
+#
+# <file system>	<dir>	<type>	<options>	<dump>	<pass>
+# /dev/sda1
+UUID=1fd783c8-5c56-426a-b622-c1b7144dd0e7	/         	btrfs     	rw,noatime,compress=zlib,space_cache,subvol=_root	0 0
+
+# /dev/sda1
+UUID=1fd783c8-5c56-426a-b622-c1b7144dd0e7	/mnt/btrfs_vol	btrfs     	noauto,rw,noatime,compress=zlib,space_cache,subvolid=0	0 0
+
+# /dev/sda2
+UUID=e131d5b6-fb79-489d-ab81-3ebd20f1411c	/home     	ext4      	rw,noatime,data=writeback	0 2
+
+# /dev/sda3
+UUID=1d53bd21-a357-488d-93eb-c4a042738af7	none      	swap      	defaults  	0 0
+
