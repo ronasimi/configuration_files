@@ -1,7 +1,7 @@
 #avoid flicker
 double_buffer yes
 
-#own window to run simultanious 2 or more conkys
+#own window to run simultaneous 2 or more conkys
 own_window  yes
 own_window_transparent false
 own_window_argb_visual true
@@ -47,4 +47,4 @@ mpd_host localhost
 mpd_port 6600
 
 TEXT
-${color 6699cc}$kernel$color} UPTIME:${color ffffff}${uptime_short}${color} UPDATES:${color ffffff}${execpi 1800 checkupdates | wc -l}$color | ${color 6699cc}CPU${color} 0:${color ffffff}${cpu cpu1}%${color} 1:${color ffffff}${cpu cpu2}%${color} 2:${color ffffff}${cpu cpu3}%${color} 3:${color ffffff}${cpu cpu4}%${color} TEMP:${color ffffff}${execi 60 sensors | grep 'Physical id 0' | cut -c18-19 ;}°C${color} | ${color 6699cc}RAM${color} ${color ffffff}${memperc}%${color} ${color 6699cc}SWAP${color} ${color ffffff}${swapperc}%${color} | ${color 6699cc}DISK${color} / ${color ffffff}${fs_used_perc /}% ${color}${font} /home ${color ffffff}${fs_used_perc /home}%${color}${alignr}${if_existing /proc/net/route wlp3s0}${color 6699cc}${wireless_essid wlp3s0}${color} ${color ffffff}${color}${color ffffff}${wireless_link_qual_perc wlp3s0}%${color} ${color ffffff}${wireless_bitrate wlp3s0}${color} ${color ffffff}${addr wlp3s0}${color} (↑${color ffffff}${upspeed wlp3s0}/s${color})(↓${color ffffff}${downspeed wlp3s0}/s${color})${endif}${if_existing /proc/net/route enp0s25}${color 6699cc}LAN  ${color} ${color ffffff}${addr enp0s25}${color} (↑${color ffffff}${upspeed enp0s25}/s${color})(↓${color ffffff}${downspeed enp0s25}/s${color})${endif} ${color 6699cc}DESKTOP${color} ${color ffffff}${desktop}${color} | ${color 6699cc}BATT${color} ${color ffffff} ${battery_percent BAT0}% ${battery_time BAT0}${color}
+KERNEL:${color 6699cc}${kernel}${color} > UPTIME:${color 6699cc}${uptime_short}${color} > UPDATES:${color 6699cc}${execpi 1800 checkupdates | wc -l}$color > CPU 0:${color 6699cc}${cpu cpu1}%${color} 1:${color 6699cc}${cpu cpu2}%${color} 2:${color 6699cc}${cpu cpu3}%${color} 3:${color 6699cc}${cpu cpu4}%${color} > TEMP:${color 6699cc}${execi 60 sensors | grep 'Physical id 0' | cut -c18-19 ;}°C${color} > RAM ${color 6699cc}${memperc}%${color} > SWAP ${color 6699cc}${swapperc}%${color} > DISK / ${color 6699cc}${fs_used_perc /}% ${color} /home ${color 6699cc}${fs_used_perc /home}%${color}${alignr}${if_existing /proc/net/route wlp3s0}WLAN${color 6699cc}${wireless_essid wlp3s0}${wireless_link_qual_perc wlp3s0}% ${color}${color 6699cc}${wireless_bitrate wlp3s0}${color}${color 6699cc}${addr wlp3s0}${color} (↑${color 6699cc}${upspeed wlp3s0}/s${color})(↓${color 6699cc}${downspeed wlp3s0}/s${color}) > ${endif}${if_existing /proc/net/route enp0s25}LAN${color 6699cc} ${addr enp0s25}${color} (↑${color 6699cc}${upspeed enp0s25}/s${color})(↓${color 6699cc}${downspeed enp0s25}/s${color}) > ${endif} DESKTOP ${color 6699cc}${desktop}${color} > BATT${color 6699cc} ${battery_percent BAT0}% ${battery_time BAT0}${color}
