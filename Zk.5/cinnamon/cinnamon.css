@@ -311,7 +311,7 @@ StScrollBar StButton#hhandle {
 }
 
 .panel-top {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(18, 22, 26, .8);
     box-shadow: 0 1px rgba(255, 255, 255, .2);
     color: #fff;
     font-size: 9pt;
@@ -319,7 +319,7 @@ StScrollBar StButton#hhandle {
 }
 
 .panel-bottom {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(18, 22, 26, .8);
     box-shadow: 0 -1px rgba(255, 255, 255, .2);
     color: #fff;
     font-size: 9pt;
